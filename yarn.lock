@@ -4212,6 +4212,11 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
+dk_modale_package@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/dk_modale_package/-/dk_modale_package-2.0.0.tgz#f23741c82f2172a432d6ea6a9962699b9ae87951"
+  integrity sha512-q9hXyz3MhVLFFVSB3irv9MbSmPhfBAuM1+VR3P4/mY3cI2vP8kF8XrGanekRP+nNoeBZI7y7ZAv5aJA8Om1bVA==
+
 dlv@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/dlv/-/dlv-1.1.3.tgz#5c198a8a11453596e751494d49874bc7732f2e79"
@@ -9291,6 +9296,11 @@ walker@^1.0.7:
   integrity sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ==
   dependencies:
     makeerror "1.0.12"
+
+wardi-kamal-component@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/wardi-kamal-component/-/wardi-kamal-component-0.0.5.tgz#5ef9f62444e1ad43ad90747d9aa6ba34e38695b2"
+  integrity sha512-2ZxNRdWRIcSjHXN/iVhrpgMFHARbidwn/AftM3z30RgsnguXu+3nE3+jiQW4PnXLd5uPl1py9H9tbuL3nXe6Kg==
 
 watchpack@^2.3.1:
   version "2.3.1"

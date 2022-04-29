@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Form from '../components/Form';
 import { Formik } from '../components/Formik';
 
-import Modal from '../components/Modal';
+import { Modal } from "wardi-kamal-component"
 
 export default function EmployeeForm() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +11,7 @@ export default function EmployeeForm() {
   const handleClick = () => {
     setIsOpen(false);
   }
+
 
   return (
     <Container>
@@ -28,6 +29,7 @@ export default function EmployeeForm() {
           }
         />
       )}
+
       {/* <pre>{JSON.stringify(values, null, 2)}</pre> */}
     </Container >
   )
