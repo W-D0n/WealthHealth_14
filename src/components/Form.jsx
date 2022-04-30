@@ -1,6 +1,5 @@
 // import { useState } from 'react'
 // import { nanoid } from 'nanoid';
-import { useFormik } from 'formik';
 
 import { createTheme } from '@mui/material/styles';
 import { FormLabel } from '@mui/material';
@@ -8,8 +7,8 @@ import { Box } from '@mui/system';
 
 import Button from './Button';
 import DateInput from './DateInput';
-import Input from './Input';
-import Select from './Select';
+import MyTextField from './MyTextField';
+import MySelect from './MySelect';
 
 import { departments, states } from '../assets/data/mockData';
 
@@ -53,7 +52,7 @@ export default function Form({ setModal }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     // submitForm()
-    
+
   }
   return (
     <Box
@@ -70,14 +69,14 @@ export default function Form({ setModal }) {
           marginBottom: '1rem'
         }}>
           <FormLabel component='legend' sx={{ marginInline: '2rem', marginBottom: '0.5rem', fontWeight: 'bold' }}>Identity :</FormLabel>
-          <Input
+          <MyTextField
             label='First Name'
             name='firstName'
             margin='dense'
           // value={values.firstName}
           // onChange={handleInputChange}
           />
-          <Input
+          <MyTextField
             label='Last Name'
             name='lastName'
             margin='dense'
@@ -98,29 +97,29 @@ export default function Form({ setModal }) {
             flexDirection: 'row',
             marginBottom: '1rem'
           }}>
-            <Input
+            <MyTextField
               label='Street'
               name='street'
-            // value={values.street}
-            // onChange={handleInputChange}
+            value={values.street}
+            onChange={handleInputChange}
             />
-            <Input
+            <MyTextField
               label='City'
               name='city'
-            // value={values.city}
-            // onChange={handleInputChange}
+            value={values.city}
+            onChange={handleInputChange}
             />
-            <Input
+            <MyTextField
               label='Zip code'
               name='zip'
-            // value={values.zip}
-            // onChange={handleInputChange}
+            value={values.zip}
+            onChange={handleInputChange}
             />
-            <Select
+            <MySelect
               label='State'
               name='state'
-              // value={values.state}
-              // onChange={handleInputChange}
+              value={values.state}
+              onChange={handleInputChange}
               options={states}
             />
           </Box>
@@ -133,7 +132,7 @@ export default function Form({ setModal }) {
           // value={values.startDate}
           // onChange={handleInputChange}
           />
-          <Select
+          <MySelect
             label='Department'
             name='department'
             // value={values.department}

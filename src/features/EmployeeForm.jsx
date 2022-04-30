@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import Form from '../components/Form';
-import { Formik } from '../components/Formik';
+import { FormikForm } from '../components/FormikForm';
 
 import { Modal } from "wardi-kamal-component"
 
@@ -15,8 +14,8 @@ export default function EmployeeForm() {
 
   return (
     <Container>
-      <Form setModal={setIsOpen} />
-      {/* <Formik /> */}
+      {/* <Form setModal={setIsOpen} /> */}
+      <FormikForm setModal={setIsOpen} />
 
       {isOpen && (
         <Modal

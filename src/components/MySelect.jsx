@@ -1,6 +1,6 @@
 import { Autocomplete, TextField } from "@mui/material";
 
-export default function Select(props) {
+export default function MySelect(props) {
   const { name, label, value, onChange, options, error = null } = props;
 
   /**

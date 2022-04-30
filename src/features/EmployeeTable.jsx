@@ -9,7 +9,7 @@ import { tableHeaders } from '../assets/data/mockData';
 import { getEmployeeRequest } from '../services/apiService';
 import { createGlobalState } from 'react-hooks-global-state';
 
-// MUI filter component
+// custom component for MUI filter usage
 function CustomToolbar() {
   return (
     <GridToolbarContainer>
@@ -35,7 +35,6 @@ export default function EmployeeTable() {
     <Container>
       <DataGrid style={{ height: '300', width: '100%' }}
         rows={list}
-        // rows={currentEmployeesList}
         columns={tableHeaders}
         disableColumnMenu
         pageSize={pageSize}
