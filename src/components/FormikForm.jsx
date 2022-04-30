@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FormLabel } from '@mui/material'
 import { Box } from '@mui/system';
 
@@ -7,7 +7,7 @@ import DateInput from './DateInput';
 import { MyTextField } from './MyTextField';
 import MySelect from './MySelect';
 
-import { departments, states } from '../assets/data/mockData';
+import { departmentsList, statesList } from '../assets/data/mockData';
 
 import { Formik, Form } from 'formik'
 import * as yup from "yup";
@@ -34,13 +34,6 @@ const formSchema = yup.object().shape({
       /^[a-zA-Z]+$/,
       'Only letters are allowed'
     ),
-  // birthDate: yup
-  //   .string()
-  //   .required('Date is required'),
-  // startDate: yup
-  //   .string()
-  //   .required('Date is required')
-  //   .defined('Required'),
   street: yup
     .string()
     .min(2, 'Must be at least 2 characters')
@@ -59,11 +52,11 @@ const formSchema = yup.object().shape({
       /^[a-zA-Z]+$/,
       'Only letters are allowed'
     ),
-  states: yup
+  state: yup
     .string()
     .required('Required')
     .defined('Required'),
-  zipCode: yup
+  zip: yup
     .number('Must be a number')
     .min(5, 'Must be 5 digits')
     .max(5, 'Must be 5 digits')
@@ -72,11 +65,10 @@ const formSchema = yup.object().shape({
     .positive('Cannot be a negative number')
     .integer('Cannot be a negative number')
     .defined('Required'),
-  departments: yup
+  department: yup
     .string()
     .required('Required')
 });
-
 
 export const FormikForm = ({ setModal }) => {
   const initialFormValues = {
@@ -87,9 +79,9 @@ export const FormikForm = ({ setModal }) => {
     startDate: null,
     street: '',
     city: '',
-    states: '',
-    zipCode: '',
-    departments: ''
+    state: '',
+    zip: '',
+    department: ''
   }
 
   return (
@@ -100,12 +92,10 @@ export const FormikForm = ({ setModal }) => {
         validateOnChange={true}
 
         onSubmit={(values, { setSubmitting, resetForm }) => {
-          setTimeout(() => {
-            addEmployee(values)
-            setSubmitting(false);
-            resetForm();
-            setModal(true);
-          }, 500)
+          addEmployee(values)
+          setSubmitting(false);
+          resetForm();
+          setModal(true);
         }}
       >
         {/* "values" gives the current state of the form */}
@@ -147,16 +137,16 @@ export const FormikForm = ({ setModal }) => {
               />
               <MyTextField
                 label='Zip code'
-                name='zipCode'
+                name='zip'
                 value={values.zipCode}
                 onChange={handleChange}
               />
               <MySelect
                 label='State'
-                name='states'
-                value={values.states}
+                name='state'
+                value={values.state}
                 onChange={handleChange}
-                options={states}
+                options={statesList}
               />
             </Box>
             <Box sx={{ marginBlock: '1rem' }} >
@@ -168,25 +158,22 @@ export const FormikForm = ({ setModal }) => {
                 onChange={handleChange}
               />
               <MySelect
-                label='Departments'
-                name='departments'
-                value={values.departments}
+                label='Department'
+                name='department'
+                value={values.department}
                 onChange={handleChange}
-                options={departments}
+                options={departmentsList}
               />
             </Box>
             <div>
               <Button disabled={isSubmitting} type='submit' text='submit' />
               <Button type='reset' text='reset' size={"small"} />
             </div>
-            {/* <pre>{JSON.stringify(values, null, 2)}</pre>
-            <pre>{JSON.stringify(errors, null, 2)}</pre> */}
+            {/* <pre>{JSON.stringify(values, null, 2)}</pre> */}
+            <pre>{JSON.stringify(errors, null, 2)}</pre>
           </Form>
         )}
       </Formik>
     </div >
   )
 }
-
-// Pour faire apparaitre la modal il faudra vérifier que la validation est ok, donc il y a la logique de isSubmitting et isValidating à prendre en compte
-// Parser le zipcode en int et vérifier qu'il soit compris entre 01001 et 99950

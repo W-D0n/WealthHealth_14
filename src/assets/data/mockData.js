@@ -65,7 +65,7 @@ export const tableHeaders = [
     minWidth: 100,
   }
 ];
-export const departments = [
+export const departmentsList = [
   {
     id: 1,
     label: 'Sales'
@@ -87,7 +87,7 @@ export const departments = [
     label: 'Legal'
   }
 ];
-export const states = [
+export const statesList = [
   { label: "Alabama", id: 0 },
   { label: "Alaska", id: 1 },
   { label: "Arizona", id: 2 },
@@ -140,7 +140,3 @@ export const states = [
   { label: "Wisconsin", id: 49 },
   { label: "Wyoming", id: 50 }
 ]
-const statesArray = [];
-states.forEach(element => {
-  statesArray.push(element.label)
-});
