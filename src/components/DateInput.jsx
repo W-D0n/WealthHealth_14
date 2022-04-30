@@ -4,6 +4,7 @@ import { TextField } from "@mui/material";
 import { fr } from "date-fns/locale";
 import { useField } from 'formik'
 
+// Custom DatePicker component using Material UI
 export default function DatePicker(props) {
   const { name, label, value, onChange } = props
   const [field, meta] = useField(props);
@@ -13,7 +14,7 @@ export default function DatePicker(props) {
       name, value
     }
   })
-
+  // Change date from datepicker format to date-fns format (ms)
   return (
     <LocalizationProvider locale={fr} dateAdapter={AdapterDateFns}>
       <MuiDatePicker

@@ -6,6 +6,7 @@ const theme = createTheme({
   spacing: 4,
 });
 
+// Custom button component using Material UI
 export default function Button(props) {
   const { text, size, color, variant, onClick, ...other } = props
 

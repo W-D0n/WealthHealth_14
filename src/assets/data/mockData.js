@@ -1,3 +1,4 @@
+// Used for columns headers of datagrid
 export const tableHeaders = [
   {
     field: 'firstName',
@@ -65,6 +66,7 @@ export const tableHeaders = [
     minWidth: 100,
   }
 ];
+// Used for select input of form
 export const departmentsList = [
   {
     id: 1,
@@ -87,6 +89,7 @@ export const departmentsList = [
     label: 'Legal'
   }
 ];
+// Used for select input of form
 export const statesList = [
   { label: "Alabama", id: 0 },
   { label: "Alaska", id: 1 },

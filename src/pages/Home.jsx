@@ -3,6 +3,7 @@ import Sidebar from '../components/Sidebar';
 import EmployeeForm from '../features/EmployeeForm';
 
 /**
+ * Form view
  * @returns {reactElement}
  */
 const AddEmployee = () => {

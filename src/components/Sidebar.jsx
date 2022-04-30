@@ -12,7 +12,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import AddIcon from '@mui/icons-material/Add';
 
 
-
+// Styled components for Sidebar
 let theme = createTheme({
   root: {
     spacing: 2,
@@ -20,10 +20,7 @@ let theme = createTheme({
   }
 })
 
-
-/**
- *
- */
+// Sidebar comoponent using Material UI
 const Sidebar = () => {
   const handleLogout = async (e) => {
     clearStorages();

@@ -14,7 +14,7 @@ import * as yup from "yup";
 import { addEmployee } from '../services/apiService'
 import { nanoid } from 'nanoid';
 
-
+// Yup validation schema
 const formSchema = yup.object().shape({
   firstName: yup
     .string()
@@ -70,6 +70,11 @@ const formSchema = yup.object().shape({
     .required('Required')
 });
 
+/**
+ * Custom form using Formik library and custom components
+ * @param {Prop} setModal - setModal is a prop that is passed from the parent component for the modal to be closed when submit 
+ * @returns React.Component
+ */
 export const FormikForm = ({ setModal }) => {
   const initialFormValues = {
     id: nanoid(),
@@ -169,8 +174,6 @@ export const FormikForm = ({ setModal }) => {
               <Button disabled={isSubmitting} type='submit' text='submit' />
               <Button type='reset' text='reset' size={"small"} />
             </div>
-            {/* <pre>{JSON.stringify(values, null, 2)}</pre> */}
-            <pre>{JSON.stringify(errors, null, 2)}</pre>
           </Form>
         )}
       </Formik>

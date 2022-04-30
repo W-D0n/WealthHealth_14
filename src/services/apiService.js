@@ -6,7 +6,7 @@ const collectionRef = collection(db, 'employees');
 /**
 * Request which get a list of Employee
 * @memberof apiService
-* @function getEmployee Get a list of Employee from firebase
+* @function getEmployee Get a list of Employee from firestore
 * @returns {object} - api response
 */
 export const getEmployeeRequest = async () => {
@@ -22,9 +22,9 @@ export const getEmployeeRequest = async () => {
   }
 };
 /**
- * Request wich add an employee to Firestore
+ * Request which add an employee to Firestore
  * @memberof apiService
- * @function addEmployee Get a list of Employee from firebase
+ * @function addEmployee Add an entry into firestore
  * @returns {object} - api response
  */
 export const addEmployee = async (submitEmployeeData) => {

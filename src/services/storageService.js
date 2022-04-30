@@ -1,5 +1,5 @@
 /**
- * a function to clear both stores.
+ * a function to clear both storages.
  * @function
  */
 const clearStorages = () => {

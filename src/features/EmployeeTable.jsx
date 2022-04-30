@@ -23,6 +23,7 @@ export default function EmployeeTable() {
   const { setGlobalState, useGlobalState } = createGlobalState({ employeesList: [] });
   const [list] = useGlobalState('employeesList')
 
+  // fetching data from API to an array
   useEffect(() => {
     getEmployeeRequest().then(
       data => {

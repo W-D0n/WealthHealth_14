@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { FormikForm } from '../components/FormikForm';
 
-import { Modal } from "wardi-kamal-component"
+import { Modal } from "wardi-kamal-component" // npm modal component
 
 export default function EmployeeForm() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,10 +11,8 @@ export default function EmployeeForm() {
     setIsOpen(false);
   }
 
-
   return (
     <Container>
-      {/* <Form setModal={setIsOpen} /> */}
       <FormikForm setModal={setIsOpen} />
 
       {isOpen && (
@@ -28,8 +26,6 @@ export default function EmployeeForm() {
           }
         />
       )}
-
-      {/* <pre>{JSON.stringify(values, null, 2)}</pre> */}
     </Container >
   )
 };
