@@ -9292,10 +9292,10 @@ walker@^1.0.7:
   dependencies:
     makeerror "1.0.12"
 
-wardi-kamal-component@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/wardi-kamal-component/-/wardi-kamal-component-0.0.5.tgz#5ef9f62444e1ad43ad90747d9aa6ba34e38695b2"
-  integrity sha512-2ZxNRdWRIcSjHXN/iVhrpgMFHARbidwn/AftM3z30RgsnguXu+3nE3+jiQW4PnXLd5uPl1py9H9tbuL3nXe6Kg==
+wardi-kamal-component@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/wardi-kamal-component/-/wardi-kamal-component-0.0.8.tgz#04ca51b519dfebea363320397c5d67975dc60003"
+  integrity sha512-HRALZ3K2BGxGHnSBLe66T/+7WLs1QRLiWNvqPV1It5zgk3TwwKhO122hgrXcgJZj/QDP6tpeCa3jnGexmnBM0Q==
 
 watchpack@^2.3.1:
   version "2.3.1"

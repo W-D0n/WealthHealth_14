@@ -23,7 +23,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
-    "wardi-kamal-component": "^0.0.5",
+    "wardi-kamal-component": "^0.0.8",
     "yup": "^0.32.11"
   },
   "resolution": {

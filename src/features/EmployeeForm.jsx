@@ -7,18 +7,13 @@ import { Modal } from "wardi-kamal-component" // npm modal component
 export default function EmployeeForm() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = () => {
-    setIsOpen(false);
-  }
-
   return (
     <Container>
       <FormikForm setModal={setIsOpen} />
 
       {isOpen && (
         <Modal
-          clickOutsideAction={handleClick}
-          closeAction={handleClick}
+          setModal={setIsOpen}
           component={
             <p className='modal-text'>
               L'utilisateur a bien été enregistré !
