@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/src/assets/images/logo192.webp" width="500px"alt="Sublime's custom image"/>
+  <img src="/src/assets/images/WealthHealth.jpg" width="500px"alt="Sublime's custom image"/>
 </p>
 
 ---
