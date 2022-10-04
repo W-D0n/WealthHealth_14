@@ -51,3 +51,4 @@ This project was made for learning a specific concept or tool. Therefore it migh
 If I had to push further this project, I would work on :
 1. Ask to a real Designer to create a mockup.
 2. Improve the UI of displayed datas.
+3. Improve contrast.
